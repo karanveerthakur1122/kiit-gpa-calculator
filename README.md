@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+[https://kiit-sgpa-cgpa-calculator.netlify.app/]([url](https://kiit-sgpa-cgpa-calculator.netlify.app/))
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+KIIT SGPA/CGPA Calculator
+This repository hosts a React-based web application that helps KIIT students calculate their SGPA and CGPA. The application provides a user-friendly interface for entering subject details, automatically setting course codes, editing grades/credits, and generating a detailed results page. It is fully responsive, SEO optimized, and integrated with several dynamic features including export options for PDF and image formats.
 
-## Available Scripts
+Table of Contents
+  Features
+    Technology Stack
+    Installation
+    Usage
+    SEO Optimizations
+    Documentation
+    Contributing
 
-In the project directory, you can run:
+Features
+  1.SGPA/CGPA Calculator: Calculate your SGPA semester-wise and also compute CGPA using previously calculated SGPA values.
+  2.Auto-Fill and Suggestions: Automatically set course codes when entering subject names with integrated course suggestion functionality.
+  3.Editable Input Data: Easily edit credit and grade values for subjects.
+  4.Load Sample Option: Load semester sample data to quickly test and review your calculation results.
+  5.Result Preview: Generate a detailed result preview that you can export as a PDF or JPEG.
+  6.Caching: The details you enter are cached locally so that your progress is maintained until you manually clear the collected data.
+  7.Responsive and SEO Optimized: Fully responsive layout with meta tags and semantic HTML elements for improved search engine ranking.
+Documentation: 
+  Comprehensive documentation within the app explains how to use both the SGPA and CGPA calculators, as well as the results and export functionalities.
 
-### `npm start`
+Technology Stack
+  React: Front-end library for building the user interface.
+  React Router: For client-side routing.
+  CSS Modules & Flexbox/Grid Layouts: For styling and ensuring responsiveness.
+  LocalStorage: For caching user input and preserving user state.
+  html2canvas & jsPDF: For exporting the results as images or PDF files.
+  React Helmet: For SEO optimizations and modifying the document head.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Usage
+  1. SGPA Calculator: Enter your subjects, credits, and grades. Use the subject suggestion feature to quickly autofill course codes and names.
+  2. CGPA Calculator: Input the SGPA values you have obtained in previous semesters to calculate your overall CGPA.
+  3. Load Sample: Use the load sample option to quickly pre-populate the form with sample data for various semesters.
+  4. Result Page: Preview your result. Export the result as a PDF or JPEG for record-keeping.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Documentation
+The repository includes a dedicated Documentation page that explains:
+  1.How to use the SGPA and CGPA calculators.
+  2.Detailed instructions for the result preview and export features.
+  3.Tips and FAQs to help users get the most out of the application.
 
-### `npm test`
+Contributing
+Contributions are welcome! Feel free to open issues or submit pull requests. Please follow the standard GitHub Flow for contributing to the project.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+For any inquiries or suggestions, please open an issue or reach out through my GitHub profile.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy calculating!
