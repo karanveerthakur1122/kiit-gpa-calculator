@@ -1,3 +1,54 @@
+:root {
+  /* Modern color scheme */
+  --primary-color: #3a86ff;     /* Vibrant blue */
+  --secondary-color: #4361ee;   /* Secondary blue */
+  --text-color: #2b2d42;        /* Dark blue-gray for text */
+  --background-color: #f8f9fd;  /* Very light blue-tinted white */
+  --card-color: #ffffff;
+  --border-color: #e5e7f0;
+  --success-color: #4cc9f0;     /* Bright cyan */
+  --accent-color: #4895ef;      /* Mid-tone blue */
+  --highlight-color: #90dbf4;   /* Light blue */
+  --danger-color: #f72585;      /* Bright pink */
+  --gradient-start: #4cc9f0;
+  --gradient-end: #4361ee;
+  
+  /* Additional colors for various UI elements */
+  --card-hover-shadow: rgba(58, 134, 255, 0.15);
+  --button-hover: #4895ef;
+  --input-bg: #f8f9fd;
+  --hover-bg: #f0f4fd;
+}
+
+[data-theme="dark"] {
+  --text-color: #00ff41;        /* Matrix-inspired green text */
+  --text-secondary: #0cce6b;    /* Secondary text color */
+  --background-color: #0a0e17;  /* Very dark blue-black background */
+  --card-color: #141b2d;        /* Slightly lighter dark blue for cards */
+  --border-color: #1f2b45;      /* Dark blue border */
+  --primary-color: #00ff41;     /* Vibrant matrix green for primary */
+  --secondary-color: #00b894;   /* Dark green for secondary */
+  --accent-color: #01c8ee;      /* Neon blue accent */
+  --highlight-color: #32ff7e;   /* Bright matrix green highlight */
+  --gradient-start: #00b894;    /* Dark green gradient start */
+  --gradient-end: #00ff41;      /* Bright green gradient end */
+  
+  /* Additional dark mode specific colors */
+  --card-hover-shadow: rgba(0, 255, 65, 0.2);
+  --button-hover: #32ff7e;
+  --input-bg: #0d1117;         /* Very dark input backgrounds */
+  --hover-bg: #182234;         /* Slightly lighter hover background */
+  --code-bg: #1c2333;          /* Background for code blocks */
+  --grid-lines: rgba(0, 255, 65, 0.07); /* Matrix-inspired grid lines */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +56,31 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Dark Theme Matrix Effect */
+[data-theme="dark"] body {
+  background-image: 
+    linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center center;
+  position: relative;
+}
+
+[data-theme="dark"] body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, transparent 0%, var(--background-color) 80%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 code {

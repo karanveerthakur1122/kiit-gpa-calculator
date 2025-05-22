@@ -1,0 +1,83 @@
+/* Autocomplete styling for KIIT GPA Calculator */
+.input-with-suggestions {
+  position: relative;
+  width: 100%;
+}
+
+.suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 2px;
+}
+
+.suggestion-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover, .suggestion-item.active {
+  background-color: rgba(66, 153, 225, 0.1);
+}
+
+.suggestion-code {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.suggestion-name {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* Dark mode styling */
+[data-theme="dark"] .suggestions-list {
+  background-color: #1e293b;
+  border-color: #4b5563;
+}
+
+[data-theme="dark"] .suggestion-item:hover,
+[data-theme="dark"] .suggestion-item.active {
+  background-color: rgba(59, 130, 246, 0.2);
+}
+
+[data-theme="dark"] .suggestion-name {
+  color: #cbd5e1;
+}
+
+/* Sample feature styling */
+.sample-btn {
+  display: inline-flex;
+  align-items: center;
+}
+
+.sample-btn .icon {
+  margin-right: 0.5rem;
+}
+
+/* Animation for auto-filled fields */
+.auto-filled {
+  animation: highlightField 1.5s ease;
+}
+
+@keyframes highlightField {
+  0% { background-color: transparent; }
+  30% { background-color: rgba(46, 204, 113, 0.3); }
+  70% { background-color: rgba(46, 204, 113, 0.3); }
+  100% { background-color: transparent; }
+}

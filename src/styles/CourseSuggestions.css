@@ -1,0 +1,63 @@
+/* Course suggestions styles */
+.input-with-suggestions {
+  position: relative;
+}
+
+.suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 2px;
+}
+
+.suggestion-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #eee;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover, .suggestion-item.active {
+  background-color: #f5f5f5;
+}
+
+.suggestion-code {
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: var(--primary-color);
+}
+
+.suggestion-name {
+  font-size: 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Dark mode support for suggestions */
+[data-theme="dark"] .suggestions-list {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+[data-theme="dark"] .suggestion-item {
+  border-color: #374151;
+}
+
+[data-theme="dark"] .suggestion-item:hover, 
+[data-theme="dark"] .suggestion-item.active {
+  background-color: #374151;
+}

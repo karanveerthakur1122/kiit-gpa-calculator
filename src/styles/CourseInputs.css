@@ -1,0 +1,149 @@
+/* Credit and Grade Input Styles */
+.credit-input-container,
+.grade-select-container {
+  position: relative;
+}
+
+.credit-input,
+.grade-select {
+  text-align: center !important;
+  font-weight: 500 !important;
+  padding: 8px 5px !important;
+  font-size: 14px !important;
+  color: var(--text-color) !important;
+  -webkit-appearance: menulist !important; /* For Safari/Chrome */
+  appearance: menulist !important;
+}
+
+/* Fix for Firefox number inputs */
+.credit-input::-webkit-inner-spin-button, 
+.credit-input::-webkit-outer-spin-button { 
+  opacity: 1;
+}
+
+.mobile-label {
+  display: none;
+}
+
+/* Dark mode specific styles */
+[data-theme="dark"] .credit-input,
+[data-theme="dark"] .grade-select {
+  background-color: #1e293b !important;
+  color: #e2e8f0 !important;
+  border-color: #4b5563 !important;
+}
+
+/* Light mode specific styles to ensure contrast */
+[data-theme="light"] .credit-input,
+[data-theme="light"] .grade-select {
+  background-color: #ffffff !important;
+  color: #333333 !important;
+  border-color: #cccccc !important;
+}
+
+/* Auto-filled animation for course inputs */
+@keyframes highlight-field {
+  0% { background-color: transparent; }
+  30% { background-color: rgba(46, 204, 113, 0.2); }
+  70% { background-color: rgba(46, 204, 113, 0.2); }
+  100% { background-color: transparent; }
+}
+
+.auto-filled {
+  animation: highlight-field 1.5s ease;
+}
+
+/* Dark mode specific highlight */
+[data-theme="dark"] .auto-filled {
+  animation: highlight-field-dark 1.5s ease;
+}
+
+@keyframes highlight-field-dark {
+  0% { background-color: transparent; }
+  30% { background-color: rgba(46, 204, 113, 0.3); }
+  70% { background-color: rgba(46, 204, 113, 0.3); }
+  100% { background-color: transparent; }
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .mobile-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 3px;
+    color: var(--text-color);
+  }
+}
+
+/* Suggestions styling improvements */
+.suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover, .suggestion-item.active {
+  background-color: rgba(66, 153, 225, 0.1);
+}
+
+.suggestion-code {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.suggestion-name {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .suggestions-list {
+  background-color: #1e293b;
+  border-color: #4b5563;
+}
+
+[data-theme="dark"] .suggestion-item:hover,
+[data-theme="dark"] .suggestion-item.active {
+  background-color: rgba(59, 130, 246, 0.2);
+}
+
+[data-theme="dark"] .suggestion-name {
+  color: #cbd5e1;
+}
+  
+  .credit-input-container,
+  .grade-select-container {
+    margin-bottom: 15px;
+  }
+  
+  /* Improve contrast in dark mode */
+  [data-theme="dark"] .credit-input,
+  [data-theme="dark"] .grade-select {
+    background-color: #1e293b;
+    color: #e2e8f0;
+    border-color: #4b5563;
+  }
+  
+  [data-theme="dark"] .mobile-label {
+    color: #d1d5db;
+  }

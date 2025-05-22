@@ -1,0 +1,1001 @@
+.result-page {
+  padding: 2rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Direct Navigation Message */
+.direct-navigation-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  z-index: 100;
+  width: 90%;
+  max-width: 500px;
+}
+
+.direct-navigation-message h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.direct-navigation-message p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.direct-navigation-message .btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.direct-navigation-message .btn:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+/* Light theme styles for export */
+.light-theme-export {
+  background-color: white;
+  color: #333;
+}
+
+.light-theme-export .result-header,
+.light-theme-export .result-card,
+.light-theme-export table,
+.light-theme-export th,
+.light-theme-export td,
+.light-theme-export .admission-info,
+.light-theme-export .student-info,
+.light-theme-export .programme-info,
+.light-theme-export .course-info,
+.light-theme-export .remarks-section,
+.light-theme-export .performance-section,
+.light-theme-export .signatures,
+.light-theme-export .disclaimer {
+  background-color: white;
+  color: #333;
+  border-color: #ddd;
+}
+
+.light-theme-export th {
+  background-color: #f5f5f5;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.page-description {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+/* Info Section */
+.info-section {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  border: 1px dashed var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.info-header {
+  background-color: rgba(0, 0, 0, 0.03);
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.info-header:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.info-icon {
+  color: var(--primary-color);
+  margin-right: 8px;
+  font-size: 1.1rem;
+}
+
+.toggle-icon {
+  margin-left: auto;
+  font-size: 0.8rem;
+  transition: transform 0.3s;
+}
+
+.info-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.info-content.show {
+  max-height: 300px;
+  padding: 15px;
+}
+
+.info-content ol {
+  padding-left: 20px;
+}
+
+.info-content li {
+  margin-bottom: 8px;
+}
+
+.info-content p {
+  margin-top: 15px;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+.result-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0 1rem;
+}
+
+/* Form Section */
+.form-section {
+  flex: 1;
+  min-width: 300px;
+  background-color: var(--card-color);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+}
+
+.form-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.form-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 60px;
+  background-color: var(--secondary-color);
+  border-radius: 3px;
+}
+
+.form-section h3 {
+  color: var(--secondary-color);
+  margin: 1.5rem 0 1rem;
+  font-size: 1.4rem;
+}
+
+.form-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-item {
+  flex: 1;
+  min-width: 120px;
+}
+
+.form-item.full-width {
+  flex-basis: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+input, select {
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.1);
+}
+
+/* Ensure text is visible in all themes */
+input::placeholder {
+  color: #999;
+  opacity: 0.7;
+}
+
+[data-theme="dark"] input::placeholder {
+  color: #aaa;
+  opacity: 0.7;
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] select {
+  background-color: #1e293b;
+  border-color: #374151;
+  color: #e2e8f0;
+}
+
+.auto-calculated {
+  background-color: rgba(0, 0, 0, 0.03);
+  color: var(--primary-color);
+  font-weight: 500;
+  cursor: not-allowed;
+}
+
+.auto-calculated-notice {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 0.875rem;
+  color: var(--primary-color);
+}
+
+.auto-icon {
+  margin-right: 8px;
+}
+
+/* Course Headers and Row */
+.course-headers {
+  display: grid;
+  grid-template-columns: 1fr 2fr 0.7fr 0.7fr 0.8fr;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: var(--primary-color);
+  padding: 0 5px;
+}
+
+.course-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 0.7fr 0.7fr 0.8fr;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+/* Special styles for credit and grade inputs */
+.course-row input[type="number"],
+.course-row select {
+  text-align: center;
+  font-weight: 500;
+  color: var(--text-color);
+  background-color: var(--input-bg);
+  min-width: 60px;
+  height: 40px;
+  padding: 5px;
+}
+
+.course-row select {
+  appearance: menulist; /* Show the dropdown arrow */
+  -webkit-appearance: menulist;
+  cursor: pointer;
+}
+
+.remove-btn {
+  background-color: var(--danger-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.remove-btn:hover {
+  background-color: #d32f2f;
+}
+
+.add-course-btn {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.add-course-btn:hover {
+  background-color: #0d904f;
+}
+
+/* Template Management */
+.template-section {
+  margin: 1rem 0 2rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+  border: 1px dashed var(--border-color);
+}
+
+.template-input {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.template-input input {
+  flex: 3;
+}
+
+.template-btn {
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+}
+
+.save-btn {
+  background-color: var(--secondary-color);
+  color: white;
+  flex: 1;
+}
+
+.save-btn:hover {
+  background-color: #0d904f;
+}
+
+.templates-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.template-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.template-name {
+  font-weight: 500;
+}
+
+.template-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.template-action-btn {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border: none;
+}
+
+.load-btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.load-btn:hover {
+  background-color: #0066cc;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+.saved-templates h4 {
+  margin: 0.5rem 0;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+/* Export Buttons */
+.export-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.export-btn {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  flex: 1;
+  text-align: center;
+}
+
+.export-btn:hover {
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(58, 134, 255, 0.3);
+}
+
+.reset-btn {
+  background: linear-gradient(135deg, #f44336, #ff5252);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.reset-btn:hover {
+  background: linear-gradient(135deg, #d32f2f, #f44336);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(244, 67, 54, 0.3);
+}
+
+/* Preview Section */
+.preview-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.preview-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  position: relative;
+  padding-bottom: 0.8rem;
+  text-align: center;
+}
+
+.preview-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 60px;
+  background-color: var(--secondary-color);
+  border-radius: 3px;
+}
+
+/* Result Card */
+.result-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #000;
+  width: 692px; /* Custom width */
+  min-height: 894px; /* Custom height */
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  page-break-inside: avoid;
+}
+
+@media screen {
+  .result-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .result-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+  }
+}
+
+.result-header {
+  position: relative;
+  width: 100%;
+  /* margin-bottom: 15px; */
+  /* padding-top: 20px; */
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.logo img {
+  height: auto;
+  width: 320px;
+  object-fit: contain;
+}
+
+.logo-text {
+  text-align: center;
+}
+
+.logo-text h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #388e3c;
+  text-transform: uppercase;
+}
+
+.logo-text p {
+  margin: 2px 0 0;
+  padding: 0;
+  font-size: 10px;
+  color: #666;
+  font-style: italic;
+}
+
+.date-section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 12px;
+  text-align: right;
+}
+
+.report-title {
+  text-align: center;
+  margin: 20px 0 15px;
+}
+
+.report-title h3 {
+  margin: 0 0 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.report-title h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.cgpa-indicator {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.admission-info {
+  margin: 15px 0;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.admission-info p {
+  margin: 0;
+}
+
+.admission-info p:first-child {
+  margin-right: 20px;
+}
+
+.student-info table, 
+.course-info table,
+.performance-section table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 10px 0;
+  table-layout: fixed;
+}
+
+.student-info table {
+  font-size: 12px;
+}
+
+.course-info table {
+  font-size: 11px;
+}
+
+.performance-section table {
+  font-size: 11px;
+}
+
+.student-info table th, 
+.student-info table td,
+.course-info table th,
+.course-info table td,
+.performance-section table th,
+.performance-section table td {
+  border: 1px solid #000;
+  padding: 6px 8px;
+  text-align: left;
+  vertical-align: middle;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.student-info table th,
+.course-info table th,
+.performance-section table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Student info table specific columns */
+.student-info table th:nth-child(1),
+.student-info table td:nth-child(1) {
+  width: 30%;
+}
+
+.student-info table th:nth-child(2),
+.student-info table td:nth-child(2),
+.student-info table th:nth-child(3),
+.student-info table td:nth-child(3) {
+  width: 25%;
+}
+
+.student-info table th:nth-child(4),
+.student-info table td:nth-child(4) {
+  width: 20%;
+}
+
+.student-info table td,
+.course-info table td {
+  max-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Course table column sizes */
+.course-info table th:nth-child(1),
+.course-info table td:nth-child(1) {
+  width: 15%;
+}
+
+.course-info table th:nth-child(2),
+.course-info table td:nth-child(2) {
+  width: 55%;
+}
+
+.course-info table th:nth-child(3),
+.course-info table td:nth-child(3) {
+  width: 15%;
+  text-align: center;
+}
+
+.course-info table th:nth-child(4),
+.course-info table td:nth-child(4) {
+  width: 15%;
+  text-align: center;
+}
+
+/* Performance table column sizes */
+.performance-section table th,
+.performance-section table td {
+  text-align: center;
+  width: 16.66%;
+}
+
+.performance-section table th[colspan="3"],
+.performance-section table th[colspan="3"] {
+  width: 50%;
+}
+
+.programme-info {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 15px 0;
+}
+
+.remarks-section {
+  font-size: 14px;
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.signatures {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.disclaimer {
+  position: absolute;
+  bottom: 5px;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  font-size: 10px;
+  color: #999;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+.placeholder {
+  display: inline-block;
+  min-width: 60px;
+  border-bottom: 1px dashed #999;
+  height: 1em;
+  position: relative;
+  margin: 0 4px;
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] .form-section {
+  background-color: #0d1117;
+  border: 1px solid rgba(0, 255, 65, 0.15);
+}
+
+/* Result card is always in light mode, even in dark theme */
+.result-card {
+  background-color: white !important;
+  color: #000 !important;
+  border-color: #ddd !important;
+}
+
+.result-card * {
+  color: inherit;
+}
+
+.student-info table th,
+.course-info table th,
+.performance-section table th {
+  background-color: #f2f2f2 !important;
+  color: #000 !important;
+}
+
+.student-info table td,
+.course-info table td,
+.performance-section table td {
+  border-color: #000 !important;
+  color: #000 !important;
+}
+
+.report-title h2,
+.report-title h3 {
+  color: #000 !important;
+}
+
+.logo-text h2 {
+  color: #388e3c !important;
+}
+
+.logo-text p {
+  color: #666 !important;
+}
+
+.disclaimer {
+  color: #999 !important;
+}
+
+/* Make sure specific elements in result card maintain light mode colors */
+.admission-info p,
+.programme-info p,
+.remarks-section p,
+.signatures p {
+  color: #000 !important;
+}
+
+.signatures {
+  color: #000 !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .result-container {
+    flex-direction: column;
+  }
+  
+  .preview-section {
+    margin-top: 2rem;
+  }
+  
+  .course-row {
+    grid-template-columns: 1fr 2fr 0.5fr 0.5fr 0.8fr;
+  }
+  
+  .remove-btn {
+    padding: 8px;
+    font-size: 12px;
+  }
+  
+  /* Ensure course number input and grade select are visible */
+  .course-row input[type="number"],
+  .course-row select {
+    min-width: 50px;
+    padding: 8px 5px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .course-headers {
+    display: none;
+  }
+  
+  .course-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .course-row input, 
+  .course-row select {
+    margin-bottom: 8px;
+    width: 100%;
+  }
+  
+  /* Add labels in mobile view for clarity */
+  .course-row .input-with-suggestions:first-child::before {
+    content: "Course Code:";
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 3px;
+    color: var(--text-color);
+  }
+  
+  .course-row .input-with-suggestions:nth-child(2)::before {
+    content: "Course Name:";
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 3px;
+    color: var(--text-color);
+  }
+  
+  .course-row input[type="number"]::before {
+    content: "Credit:";
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 3px;
+    color: var(--text-color);
+  }
+  
+  /* Make credit input more visible on mobile */
+  .course-row input[type="number"] {
+    position: relative;
+    max-width: 100%;
+  }
+  
+  .course-row input[type="number"]::before {
+    content: "Credit:";
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 12px;
+  }
+  
+  /* Make select more visible on mobile */
+  .course-row select {
+    position: relative;
+    max-width: 100%;
+  }
+  
+  .course-row select::before {
+    content: "Grade:";
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 12px;
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+  
+  .export-buttons {
+    flex-direction: column;
+  }
+  
+  .result-card {
+    font-size: 90%;
+  }
+
+  .logo img {
+    max-height: 60px;
+  }
+
+  .logo-text h2 {
+    font-size: 14px;
+  }
+
+  .logo-text p {
+    font-size: 10px;
+  }
+}
+
+@media print {
+  .form-section, 
+  .page-title, 
+  .page-description, 
+  .preview-section h2,
+  .info-section {
+    display: none;
+  }
+  
+  .result-container {
+    display: block;
+  }
+  
+  .result-card {
+    box-shadow: none;
+    border: none;
+    width: 100%;
+    min-height: auto;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body, html {
+    width: 692px;
+    height: 894px;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+  }
+  
+  @page {
+    size: 692px 894px;
+    margin: 0;
+  }
+}

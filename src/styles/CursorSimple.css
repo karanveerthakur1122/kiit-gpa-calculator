@@ -1,0 +1,52 @@
+/* Custom cursor using CSS cursor property with fallbacks */
+:root {
+  --cursor-base-url: '../cursors';
+}
+
+/* Apply default cursor styles */
+body {
+  cursor: url('../cursors/cursor-light.png') 15 15, auto;
+}
+
+a, button, [role="button"], .clickable {
+  cursor: url('../cursors/pointer-light.png') 15 15, pointer;
+}
+
+input[type="text"], textarea, [contenteditable="true"] {
+  cursor: url('../cursors/text-light.png') 15 15, text;
+}
+
+/* Dark theme cursor styles */
+[data-theme="dark"] body {
+  cursor: url('../cursors/cursor-dark.png') 15 15, auto;
+}
+
+[data-theme="dark"] a, 
+[data-theme="dark"] button, 
+[data-theme="dark"] [role="button"],
+[data-theme="dark"] .clickable {
+  cursor: url('../cursors/pointer-dark.png') 15 15, pointer;
+}
+
+[data-theme="dark"] input[type="text"],
+[data-theme="dark"] textarea,
+[data-theme="dark"] [contenteditable="true"] {
+  cursor: url('../cursors/text-dark.png') 15 15, text;
+}
+
+/* Media query to disable custom cursors on mobile */
+@media (max-width: 768px), (pointer: coarse) {
+  body, a, button, [role="button"], .clickable, input, textarea, [contenteditable="true"] {
+    cursor: auto;
+  }
+  [data-theme="dark"] body, 
+  [data-theme="dark"] a, 
+  [data-theme="dark"] button, 
+  [data-theme="dark"] [role="button"], 
+  [data-theme="dark"] .clickable, 
+  [data-theme="dark"] input, 
+  [data-theme="dark"] textarea, 
+  [data-theme="dark"] [contenteditable="true"] {
+    cursor: auto;
+  }
+}
