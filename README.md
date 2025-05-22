@@ -1,4 +1,4 @@
-[https://kiit-sgpa-cgpa-calculator.netlify.app/]([url](https://kiit-sgpa-cgpa-calculator.netlify.app/)
+[https://kiit-sgpa-cgpa-calculator.netlify.app/]([url](https://kiit-sgpa-cgpa-calculator.netlify.app)
 
 KIIT SGPA/CGPA Calculator
 This repository hosts a React-based web application that helps KIIT students calculate their SGPA and CGPA. The application provides a user-friendly interface for entering subject details, automatically setting course codes, editing grades/credits, and generating a detailed results page. It is fully responsive, SEO optimized, and integrated with several dynamic features including export options for PDF and image formats.
