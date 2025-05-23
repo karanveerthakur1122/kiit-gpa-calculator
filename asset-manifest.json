@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/kiit-gpa-calculator/static/css/main.cf723ac1.css",
+    "main.js": "/kiit-gpa-calculator/static/js/main.01ea46a5.js",
+    "static/js/977.e543dc5c.chunk.js": "/kiit-gpa-calculator/static/js/977.e543dc5c.chunk.js",
+    "static/js/455.9b4f60eb.chunk.js": "/kiit-gpa-calculator/static/js/455.9b4f60eb.chunk.js",
+    "static/js/453.36cd4e46.chunk.js": "/kiit-gpa-calculator/static/js/453.36cd4e46.chunk.js",
+    "index.html": "/kiit-gpa-calculator/index.html",
+    "main.cf723ac1.css.map": "/kiit-gpa-calculator/static/css/main.cf723ac1.css.map",
+    "main.01ea46a5.js.map": "/kiit-gpa-calculator/static/js/main.01ea46a5.js.map",
+    "977.e543dc5c.chunk.js.map": "/kiit-gpa-calculator/static/js/977.e543dc5c.chunk.js.map",
+    "455.9b4f60eb.chunk.js.map": "/kiit-gpa-calculator/static/js/455.9b4f60eb.chunk.js.map",
+    "453.36cd4e46.chunk.js.map": "/kiit-gpa-calculator/static/js/453.36cd4e46.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cf723ac1.css",
+    "static/js/main.01ea46a5.js"
+  ]
+}
